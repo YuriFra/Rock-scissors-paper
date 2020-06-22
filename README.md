@@ -1,6 +1,8 @@
 # Rock-scissors-paper
 Creating a simple Js game
 
+[Check out my version.](https://yurifra.github.io/Rock-scissors-paper/)
+
 - Repository: `rock-scissors-paper`
 - Type of Challenge: `Learning Challenge`
 - Duration: take your time
