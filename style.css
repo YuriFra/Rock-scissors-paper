@@ -1,0 +1,38 @@
+/*** general ***/
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    color: #fff;
+    font-family: 'Signika', sans-serif;
+    background-color: cadetblue;
+}
+/*** header ***/
+#gameName {
+    font-size: 3rem;
+    text-shadow: 3px 3px 3px darkgoldenrod;
+}
+.btn {
+    color: #fff;
+    background-color: darkgoldenrod;
+}
+.card {
+    color: darkgoldenrod;
+}
+#score, #winText {
+    text-shadow: 3px 3px 3px darkgoldenrod;
+}
+.scoreNr {
+    color: #244949;
+    text-shadow: none;
+    font-weight: bold;
+}
+#choiceText {
+    color: #244949;
+}
+#reset {
+    color: darkgoldenrod;
+    background-color: #fff;
+}
