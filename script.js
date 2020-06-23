@@ -15,45 +15,45 @@ document.getElementById('reset').addEventListener('click', () => {
 })
 function check() {
     if (yourChoice === tedChoice) {
-        choiceText.innerText = "";
-        winText.innerText = "- It's a draw -";
+        choiceText.innerText = `${yourChoice} vs ${tedChoice}`;
+        winText.innerText = "It's a draw";
         yourCounter += 1;
         tedCounter += 1;
         yourScore.innerText = yourCounter;
         tedScore.innerText = tedCounter;
-    } else if (yourChoice === 0) {
-        if (tedChoice === 1) {
-            choiceText.innerText = "Rock vs scissors"
-            winText.innerText = "- You win -";
+    } else if (yourChoice === 'rock') {
+        if (tedChoice === 'scissors') {
+            choiceText.innerText = `${yourChoice} vs ${tedChoice}`;
+            winText.innerText = "You win!";
             yourCounter += 3;
             yourScore.innerText = yourCounter;
-        } else if (tedChoice === 2) {
-            choiceText.innerText = "Rock vs paper"
-            winText.innerText = "- Ted wins -";
+        } else if (tedChoice === 'paper') {
+            choiceText.innerText = `${yourChoice} vs ${tedChoice}`;
+            winText.innerText = "Ted wins";
             tedCounter += 3;
             tedScore.innerText = tedCounter;
         }
-    } else if (yourChoice === 1) {
-        if (tedChoice === 0) {
-            choiceText.innerText = "Scissors vs rock"
-            winText.innerText = "- Ted wins -";
+    } else if (yourChoice === 'scissors') {
+        if (tedChoice === 'rock') {
+            choiceText.innerText = `${yourChoice} vs ${tedChoice}`;
+            winText.innerText = "Ted wins";
             tedCounter += 3;
             tedScore.innerText = tedCounter;
-        } else if (tedChoice === 2) {
-            choiceText.innerText = "Scissors vs paper"
-            winText.innerText = "- You win -";
+        } else if (tedChoice === 'paper') {
+            choiceText.innerText = `${yourChoice} vs ${tedChoice}`;
+            winText.innerText = "You win!";
             yourCounter += 3;
             yourScore.innerText = yourCounter;
         }
-    } else if (yourChoice === 2) {
-        if (tedChoice === 0) {
-            choiceText.innerText = "Paper vs rock"
-            winText.innerText = "- You win -";
+    } else if (yourChoice === 'paper') {
+        if (tedChoice === 'rock') {
+            choiceText.innerText = `${yourChoice} vs ${tedChoice}`;
+            winText.innerText = "You win";
             yourCounter += 3;
             yourScore.innerText = yourCounter;
-        } else if (tedChoice === 1) {
-            choiceText.innerText = "Paper vs scissors"
-            winText.innerText = "- Ted wins -";
+        } else if (tedChoice === 'scissors') {
+            choiceText.innerText = `${yourChoice} vs ${tedChoice}`;
+            winText.innerText = "Ted wins";
             tedCounter += 3;
             tedScore.innerText = tedCounter;
         }
@@ -62,19 +62,20 @@ function check() {
 
 (() => {
     document.getElementById('rock').addEventListener('click', () => {
-        yourChoice = 0;
+        yourChoice = 'rock';
         console.log(yourChoice);
     })
     document.getElementById('scissors').addEventListener('click', () => {
-        yourChoice = 1;
+        yourChoice = 'scissors';
         console.log(yourChoice);
     })
     document.getElementById('paper').addEventListener('click', () => {
-        yourChoice = 2;
+        yourChoice = 'paper';
         console.log(yourChoice);
     })
+    let choiceArr = ['rock', 'scissors', 'paper'];
     document.getElementById('ted').addEventListener('click', () => {
-        tedChoice = Math.floor(Math.random() * 3);
+        tedChoice = choiceArr[Math.floor(Math.random() * choiceArr.length)];
         console.log(tedChoice);
         check();
     })

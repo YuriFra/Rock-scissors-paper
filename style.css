@@ -12,27 +12,37 @@ body, html {
 /*** header ***/
 #gameName {
     font-size: 3rem;
-    text-shadow: 3px 3px 3px darkgoldenrod;
+    text-shadow: 4px 4px 3px darkgoldenrod;
 }
 .btn {
     color: #fff;
     background-color: darkgoldenrod;
+    box-shadow: 5px 5px 5px #2c5f5f;
 }
 .card {
-    color: darkgoldenrod;
+    color: #9c7308;
+    box-shadow: 5px 5px 5px #2c5f5f;
 }
 #score, #winText {
-    text-shadow: 3px 3px 3px darkgoldenrod;
+    text-shadow: 2px 2px 3px darkgoldenrod;
 }
 .scoreNr {
     color: #244949;
-    text-shadow: none;
+    text-shadow: 2px 2px 3px #337b7b;
     font-weight: bold;
 }
 #choiceText {
     color: #244949;
+    text-shadow: 2px 2px 3px #337b7b;
+}
+.img-thumbnail {
+    box-shadow: 5px 5px 5px #2c5f5f;
+}
+input:active {
+    transform: scale(0.95);
 }
 #reset {
     color: darkgoldenrod;
     background-color: #fff;
+    box-shadow: 5px 5px 5px #2c5f5f;
 }
